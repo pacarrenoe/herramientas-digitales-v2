@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <section className="home">
             <div className="home-card">
-                <h1>Bienvenido a herramientas digitales</h1>
+                <h1>Hola! bienvenido a herramientas digitales</h1>
 
                 <p className="home-description">
                     Herramienta técnica para trabajar con documentos y textos
