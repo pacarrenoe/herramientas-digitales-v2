@@ -1,0 +1,15 @@
+.app-root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-content {
+    flex: 1;
+    padding: 1rem;
+    background: #f3f4f6;
+
+    /* ✅ scroll real */
+    overflow-y: auto;
+    overflow-x: hidden;
+}

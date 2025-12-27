@@ -1,0 +1,89 @@
+/* =====================
+   Página Comparador
+===================== */
+.pdf-comparator-page {
+    padding: 2rem;
+}
+
+/* =====================
+   Títulos
+===================== */
+.pdf-comparator-page .page-title {
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #111827;
+}
+
+.pdf-comparator-page .page-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+}
+
+/* =====================
+   Layout principal
+===================== */
+.pdf-comparator-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* =====================
+   Cajas PDF
+===================== */
+.pdf-box {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pdf-box h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.pdf-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* =====================
+   Input file
+===================== */
+.pdf-box input[type="file"] {
+    margin-top: 0.75rem;
+    padding: 0.6rem;
+    border: 1px dashed #cbd5e1;
+    border-radius: 8px;
+    background: #f9fafb;
+    cursor: pointer;
+}
+
+/* =====================
+   Acciones
+===================== */
+.pdf-comparator-actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 900px) {
+    .pdf-comparator-layout {
+        grid-template-columns: 1fr;
+    }
+}

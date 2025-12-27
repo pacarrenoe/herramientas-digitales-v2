@@ -1,0 +1,81 @@
+.home {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-card {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 760px;
+    width: 100%;
+    text-align: center;
+}
+
+.home-card h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.home-description {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* =========================
+   Atajos
+========================= */
+
+.home-shortcuts {
+    margin-top: 2.25rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.home-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: #f9fafb;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.home-link:hover {
+    background: white;
+    border-color: #e5e7eb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.home-link-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111827;
+}
+
+.home-link-desc {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+    .home-shortcuts {
+        grid-template-columns: 1fr;
+    }
+}

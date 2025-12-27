@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    margin: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* =====================
+   Base
+===================== */
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* =====================
+   Botón base
+===================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    border-radius: 6px;
+    border: none;
+
+    transition: background 0.15s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+/* =====================
+   Variantes
+===================== */
+.btn.primary {
+    background: #1a73e8;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #1558c0;
+}
+
+.btn.secondary {
+    background: #2f343a;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: #1f2328;
+}
+
+.btn.tertiary {
+    background: #e5e7eb;
+    color: #636363;
+}
+
+.btn.tertiary:hover {
+    background: #d1d5db;
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px dashed #cbd5e1;
+    color: #636363;
+}
+
+.btn.ghost:hover {
+    border-color: #94a3b8;
+    color: #374151;
+}
+
+/* =====================
+   Estados
+===================== */
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* =====================
+   Layout helpers
+===================== */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}

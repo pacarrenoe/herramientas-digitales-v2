@@ -1,0 +1,58 @@
+.topbar {
+    height: 56px;
+    min-height: 56px;
+
+    background: linear-gradient(
+            180deg,
+            #1f2933 0%,
+            #111827 100%
+    );
+
+    color: #f9fafb;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+    padding: 0 1.75rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topbar-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.topbar-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.topbar-nav a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.topbar-nav a:hover {
+    color: #ffffff;
+}
+
+.topbar-nav a.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.topbar-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #3b82f6;
+    border-radius: 1px;
+}

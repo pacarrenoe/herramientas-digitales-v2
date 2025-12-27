@@ -1,0 +1,157 @@
+/* =====================
+   Página
+===================== */
+.image-page {
+    padding: 2rem;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+/* =====================
+   Layout principal
+===================== */
+.image-layout {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* =====================
+   Columna izquierda
+===================== */
+.image-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =====================
+   Accordion
+===================== */
+.accordion {
+    background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 0.9rem 1.1rem;
+    font-weight: 600;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-icon {
+    font-size: 1.2rem;
+}
+
+.accordion-content {
+    background: #f8fafc;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* =====================
+   Resultados
+===================== */
+.result-box {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.result-box h4 {
+    margin-bottom: 0.5rem;
+}
+
+.result-box textarea {
+    width: 100%;
+    min-height: 90px;
+    resize: vertical;
+    font-family: monospace;
+}
+
+/* =====================
+   Vista previa
+===================== */
+.image-preview {
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.empty-preview {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+
+.section-box .image-formats {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.section-box {
+    text-align: center;
+}
+
+.section-box h3{
+    margin: 0 0 10px;
+}
+
+.section-box p {
+    margin: 10px 0;
+    font-size: 0.85rem;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.section-box textarea {
+    width: 100%;
+    height: 40px;
+    resize: vertical;
+    font-family: Arial;
+}
+
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 1100px) {
+    .image-layout {
+        grid-template-columns: 1fr;
+    }
+}
