@@ -8,6 +8,7 @@ export default function TopBar() {
             <nav className="topbar-nav">
                 <NavLink to="/">Inicio</NavLink>
                 <NavLink to="/lector">Lector</NavLink>
+                <NavLink to="/lectorv2">Lector V2</NavLink>
                 <NavLink to="/comparador">Comparador PDF</NavLink>
                 <NavLink to="/conversor">Conversor de imagenes</NavLink>
                 <NavLink to="/ascii">Conversor ASCII</NavLink>
