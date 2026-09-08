@@ -1,0 +1,168 @@
+.demo-pdf {
+    min-height: 530px;
+    overflow: hidden;
+    border-radius: 11px;
+    background: #858b92;
+    display: flex;
+    flex-direction: column;
+}
+
+.demo-pdf-toolbar {
+    min-height: 52px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: #fff;
+    background: linear-gradient(#4d545c, #393f47);
+    font-size: 0.78rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.demo-toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.demo-toolbar-actions {
+    margin-left: auto;
+}
+
+.demo-toolbar-icon {
+    min-width: 22px;
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1;
+    text-align: center;
+}
+
+.demo-page-number {
+    min-width: 44px;
+    padding: 0.35rem 0.65rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.demo-toolbar-separator {
+    width: 1px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.demo-pdf-canvas {
+    flex: 1;
+    padding: 11px 34px 0;
+    background: linear-gradient(90deg, #90969d, #c8cbd0 12%, #a1a6ac 88%, #858b92);
+}
+
+.demo-document {
+    min-height: 477px;
+    padding: 2.1rem 2.4rem;
+    color: #07104e;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.28);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 145px;
+    gap: 1rem;
+}
+
+.demo-document h3 {
+    margin: 0;
+    font-size: clamp(1.5rem, 1.8vw, 1.95rem);
+    line-height: 1.15;
+}
+
+.demo-title-line {
+    display: block;
+    width: 76px;
+    height: 6px;
+    margin: .95rem 0 1.15rem;
+    border-radius: 99px;
+    background: #087bf0;
+}
+
+.demo-document h4 {
+    margin: 0 0 0.9rem;
+    font-size: .95rem;
+}
+
+.demo-document p,
+.demo-document li {
+    font-size: 0.7rem;
+    line-height: 1.55;
+}
+
+.demo-document blockquote {
+    margin: 1rem 0 1.35rem;
+    padding: .8rem 1rem;
+    border-radius: 10px;
+    background: linear-gradient(100deg, #e9f6ff, #d9edfb);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.demo-document blockquote strong {
+    color: #087bf0;
+    font-size: 2.1rem;
+    line-height: 0.8;
+}
+
+.demo-document blockquote span {
+    font-size: 0.72rem;
+    line-height: 1.45;
+}
+
+.demo-document ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.demo-document li {
+    margin: 0.45rem 0;
+}
+
+.demo-document li::before {
+    content: "";
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 0.85rem;
+    border-radius: 50%;
+    background: #087bf0;
+}
+
+.demo-document-art {
+    display: grid;
+    place-items: center;
+}
+
+.demo-document-art svg {
+    width: 100%;
+    max-width: 165px;
+}
+
+.demo-art-blob {
+    fill: #e5f3ff;
+}
+
+.demo-art-file {
+    fill: #fff;
+    stroke: #087bf0;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 700px) {
+    .demo-pdf-toolbar { gap: 0.55rem; padding: 0 0.65rem; }
+    .demo-toolbar-group { gap: 0.4rem; }
+    .demo-toolbar-separator, .demo-toolbar-actions .demo-toolbar-icon:nth-child(2) { display: none; }
+    .demo-pdf-canvas { padding: 10px 12px 0; }
+    .demo-document { min-height: 530px; padding: 2rem 1.5rem; grid-template-columns: 1fr; }
+    .demo-document-art { display: none; }
+}

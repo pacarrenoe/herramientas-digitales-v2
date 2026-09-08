@@ -1,0 +1,19 @@
+.app-root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-content {
+    flex: 1;
+    padding: 1.5rem 1.75rem;
+    background: radial-gradient(circle at 48% 0%, #fff 0, #f5fbff 38%, #edf7fd 100%);
+
+    /* ✅ scroll real */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media (max-width: 760px) {
+    .app-content { padding: 1.25rem 1rem; }
+}
