@@ -12,13 +12,13 @@ export default function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/viewer" element={<PdfViewerPage />} />
                 <Route element={<MainLayout />}>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/lector" element={<PdfReaderPage />} />
                     <Route path="/conversor" element={<ImageConverterPage />} />
                     <Route path="/ascii" element={<TextToEntitiesPage />} />
                     <Route path="/comparador" element={<PdfComparatorPage />} />
-                    <Route path="/viewer" element={<PdfViewerPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
