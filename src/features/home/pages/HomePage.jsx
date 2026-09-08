@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import "../styles/home.css";
+import "./HomePage.css";
 
-export default function Home() {
+export default function HomePage() {
     return (
         <section className="home">
             <div className="home-card">
