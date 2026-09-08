@@ -1,5 +1,5 @@
 .viewer-root {
-    height: calc(100vh - 78px - 4.5rem);
+    height: calc(100vh - 66px - 3rem);
     min-height: 560px;
     background: #000;
     display: flex;
