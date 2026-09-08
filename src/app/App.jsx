@@ -18,8 +18,8 @@ export default function App() {
                     <Route path="/conversor" element={<ImageConverterPage />} />
                     <Route path="/ascii" element={<TextToEntitiesPage />} />
                     <Route path="/comparador" element={<PdfComparatorPage />} />
-                    <Route path="/viewer" element={<PdfViewerPage />} />
                 </Route>
+                <Route path="/viewer" element={<PdfViewerPage />} />
             </Routes>
         </BrowserRouter>
     );

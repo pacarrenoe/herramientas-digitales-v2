@@ -1,13 +1,9 @@
 .viewer-root {
-    height: calc(100vh - 78px - 4.5rem);
-    min-height: 560px;
+    position: fixed;
+    inset: 0;
     background: #000;
     display: flex;
     flex-direction: column;
-}
-
-@media (max-width: 760px) {
-    .viewer-root { height: calc(100vh - 92px - 2.5rem); }
 }
 
 .viewer-toolbar {
