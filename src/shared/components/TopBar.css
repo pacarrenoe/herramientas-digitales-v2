@@ -1,0 +1,106 @@
+.topbar {
+    min-height: 78px;
+    padding: 0 3.25rem;
+    color: #fff;
+    background: linear-gradient(110deg, #064892 0%, #082f68 48%, #031f48 100%);
+    border-radius: 0 0 14px 14px;
+    box-shadow: 0 8px 24px rgba(2, 34, 75, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.topbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.27rem;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.topbar-logo {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: linear-gradient(145deg, #2b9cff, #0068ed);
+    box-shadow: 0 8px 18px rgba(0, 83, 205, 0.38), inset 0 1px rgba(255, 255, 255, 0.28);
+}
+
+.topbar-logo svg {
+    width: 29px;
+    height: 29px;
+    fill: rgba(255, 255, 255, 0.2);
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.topbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.topbar-nav a {
+    min-height: 48px;
+    padding: 0 1.05rem;
+    border-radius: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    white-space: nowrap;
+    transition: color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.topbar-nav a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.topbar-nav a.active {
+    color: #fff;
+    background: linear-gradient(145deg, #2389f5, #0870e8);
+    box-shadow: 0 8px 20px rgba(0, 93, 213, 0.35);
+}
+
+.topbar-nav svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+@media (max-width: 1100px) {
+    .topbar { padding: 0 1.5rem; }
+    .topbar-brand > span:last-child { display: none; }
+    .topbar-nav a { padding: 0 0.8rem; }
+}
+
+@media (max-width: 760px) {
+    .topbar {
+        min-height: auto;
+        padding: 0.75rem 1rem;
+        align-items: flex-start;
+    }
+
+    .topbar-logo { width: 44px; height: 44px; }
+    .topbar-nav { overflow-x: auto; padding-bottom: 0.25rem; }
+    .topbar-nav a { min-height: 44px; padding: 0 0.75rem; }
+    .topbar-nav a span { display: none; }
+}
