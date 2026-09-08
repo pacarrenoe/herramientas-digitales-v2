@@ -1,5 +1,6 @@
 .demo-pdf {
-    min-height: 530px;
+    min-height: 0;
+    flex: 1;
     overflow: hidden;
     border-radius: 11px;
     background: #858b92;
@@ -56,9 +57,12 @@
     flex: 1;
     padding: 11px 34px 0;
     background: linear-gradient(90deg, #90969d, #c8cbd0 12%, #a1a6ac 88%, #858b92);
+    display: flex;
 }
 
 .demo-document {
+    width: 100%;
+    flex: 1;
     min-height: 477px;
     padding: 2.1rem 2.4rem;
     color: #07104e;
