@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { convertTextToEntities } from "../utils/convertText";
-import "../styles/text-to-entities.css";
-import Modal from "../components/Modal";
 import HtmlPreview from "../components/HtmlPreview";
+import Modal from "../../../shared/components/Modal";
+import "./TextToEntitiesPage.css";
 
-export default function TextToEntities() {
+export default function TextToEntitiesPage() {
     const [input, setInput] = useState("");
     const [output, setOutput] = useState("");
     const [showModal, setShowModal] = useState(false);

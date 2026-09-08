@@ -1,4 +1,4 @@
-import "../styles/modal.css";
+import "./Modal.css";
 
 export default function Modal({ open, title, onClose, children }) {
     if (!open) return null;
