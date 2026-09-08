@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { pdfStore } from "../store/pdfStore";
-import "../styles/lector.css";
+import "./PdfReaderPage.css";
 
-export default function Lector() {
+export default function PdfReaderPage() {
     const [value, setValue] = useState("");
     const [preview, setPreview] = useState(null);
     const navigate = useNavigate();

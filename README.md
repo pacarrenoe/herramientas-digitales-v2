@@ -1,16 +1,48 @@
-# React + Vite
+# Herramientas digitales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web construida con React y Vite que agrupa utilidades para visualizar y comparar PDF, convertir imágenes a Base64 y transformar texto en entidades HTML.
 
-Currently, two official plugins are available:
+## Comandos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev
+npm run lint
+npm run build
+```
 
-## React Compiler
+## Arquitectura
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El código fuente usa una arquitectura organizada por funcionalidades. De esta forma, cada herramienta mantiene juntas sus páginas, componentes, estilos, estado y utilidades, y se evita mezclar código de dominios diferentes.
 
-## Expanding the ESLint configuration
+```text
+src/
+├── app/                          # Configuración general de la aplicación
+│   ├── App.jsx                   # Rutas principales
+│   ├── layouts/                  # Estructuras visuales compartidas por rutas
+│   └── styles/                   # Estilos globales
+├── features/                     # Módulos independientes por funcionalidad
+│   ├── home/                     # Página de inicio
+│   ├── image-converter/          # Conversión entre imágenes y Base64
+│   ├── pdf/                      # Lectura, comparación y visualización de PDF
+│   └── text-entities/            # Conversión y previsualización de entidades HTML
+├── shared/                       # Componentes reutilizables entre funcionalidades
+│   └── components/
+└── main.jsx                      # Punto de entrada de React
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Convenciones
+
+- **`app/`** solo contiene el ensamblado de la aplicación: rutas, layouts y estilos globales.
+- **`features/`** separa el código por dominio. Cada funcionalidad puede contener `pages/`, `components/`, `store/` o `utils/` según lo necesite.
+- **`shared/`** contiene únicamente piezas reutilizadas por más de una funcionalidad o por la capa de aplicación.
+- Los estilos específicos se colocan junto al componente o página que los utiliza y comparten su nombre (`PdfReaderPage.jsx` y `PdfReaderPage.css`).
+- Los nombres de páginas terminan en `Page` y los layouts terminan en `Layout` para expresar claramente su responsabilidad.
+
+## Añadir una herramienta
+
+1. Crea un directorio dentro de `src/features/<nombre-de-la-herramienta>`.
+2. Coloca su página principal en `pages/` y sus piezas internas en `components/`, `utils/` o `store/`.
+3. Registra la nueva ruta en `src/app/App.jsx`.
+4. Si debe aparecer en la navegación, agrega el enlace en `src/shared/components/TopBar.jsx`.
+5. Ejecuta `npm run lint` y `npm run build` antes de integrar el cambio.

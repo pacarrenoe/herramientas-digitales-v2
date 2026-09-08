@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ImageUploader from "../components/ImageUploader";
 import Base64ToImage from "../components/Base64ToImage";
-import "../styles/image-base64.css";
+import ImageUploader from "../components/ImageUploader";
+import "./ImageConverterPage.css";
 
 /* =========================
    Accordion controlado
@@ -30,7 +30,7 @@ function Accordion({ title, isOpen, onToggle, children }) {
 /* =========================
    Página principal
 ========================= */
-export default function ImageToBase64() {
+export default function ImageConverterPage() {
     const [previewSrc, setPreviewSrc] = useState(null);
     const [activeMode, setActiveMode] = useState(null); // "upload" | "view"
 

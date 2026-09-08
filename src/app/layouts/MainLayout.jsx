@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import TopBar from "../components/TopBar";
-import "../styles/layout.css";
+import TopBar from "../../shared/components/TopBar";
+import "./MainLayout.css";
 
-export default function Layout() {
+export default function MainLayout() {
     return (
         <div className="app-root">
             <TopBar />

@@ -1,8 +1,8 @@
 import { pdfStore } from "../store/pdfStore";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import "../styles/viewer.css";
+import "./PdfViewerPage.css";
 
-export default function Viewer() {
+export default function PdfViewerPage() {
     const [params] = useSearchParams();
     const navigate = useNavigate();
     const mode = params.get("mode");
