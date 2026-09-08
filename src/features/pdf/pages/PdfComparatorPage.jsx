@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { pdfStore } from "../store/pdfStore";
-import "../styles/pdf-comparator.css";
+import "./PdfComparatorPage.css";
 
-export default function PdfComparator() {
+export default function PdfComparatorPage() {
     const [pdfA, setPdfA] = useState(null);
     const [pdfB, setPdfB] = useState(null);
     const navigate = useNavigate();
