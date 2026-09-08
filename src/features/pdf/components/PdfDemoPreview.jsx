@@ -1,36 +1,8 @@
 import "./PdfDemoPreview.css";
 
-function ToolbarIcon({ children }) {
-    return <span className="demo-toolbar-icon" aria-hidden="true">{children}</span>;
-}
-
 export default function PdfDemoPreview() {
     return (
         <div className="demo-pdf" aria-label="Vista previa de un documento PDF de ejemplo">
-            <div className="demo-pdf-toolbar" aria-hidden="true">
-                <div className="demo-toolbar-group">
-                    <ToolbarIcon>◧</ToolbarIcon>
-                    <ToolbarIcon>⌕</ToolbarIcon>
-                    <ToolbarIcon>↑</ToolbarIcon>
-                    <ToolbarIcon>↓</ToolbarIcon>
-                </div>
-                <div className="demo-toolbar-group">
-                    <span className="demo-page-number">1</span>
-                    <span>/ 3</span>
-                </div>
-                <span className="demo-toolbar-separator" />
-                <div className="demo-toolbar-group">
-                    <ToolbarIcon>−</ToolbarIcon>
-                    <span>100%</span>
-                    <ToolbarIcon>＋</ToolbarIcon>
-                </div>
-                <div className="demo-toolbar-group demo-toolbar-actions">
-                    <ToolbarIcon>⇩</ToolbarIcon>
-                    <ToolbarIcon>▣</ToolbarIcon>
-                    <ToolbarIcon>⛶</ToolbarIcon>
-                </div>
-            </div>
-
             <div className="demo-pdf-canvas">
                 <article className="demo-document">
                     <div className="demo-document-copy">
