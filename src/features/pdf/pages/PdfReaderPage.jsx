@@ -131,14 +131,7 @@ export default function PdfReaderPage() {
                 </div>
 
                 <article className="reader-card reader-preview-card">
-                    <header className="reader-preview-heading">
-                        <div className="reader-card-heading">
-                            <span className="reader-heading-icon"><Icon name="file" size={30} /></span>
-                            <div><h2>Vista previa del PDF</h2><p>Aquí se mostrará tu documento</p></div>
-                        </div>
-                        <span className="reader-status ready"><Icon name="check" size={21} />Listo para visualizar</span>
-                    </header>
-
+                
                     {preview ? (
                         <iframe src={preview} title="Vista previa del PDF" />
                     ) : (
